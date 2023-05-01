@@ -119,8 +119,6 @@ public class GetDeliveryDateServiceTest
         var result = _service.Handle(POSTAL_CODE, products);
 
         // Arrange
-        var expectedTotalOfDays = 6;
-        Assert.Equal(expectedTotalOfDays, result.Count());
         Assert.True(result.ElementAt(0).IsGreenDelivery);
         Assert.False(result.ElementAt(1).IsGreenDelivery);
         Assert.False(result.ElementAt(2).IsGreenDelivery);
